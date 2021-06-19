@@ -26,14 +26,14 @@ export class DeliveryService {
     }
   }
 
-  public buscarInstrumento(termino: string): any[]{
+  public buscarInstrumentos(termino: string): any[]{
     let instrumentosArr:any[] = [];
     termino = termino.toLowerCase();
 
-    for(let instrumentox of this.instrumentosFile.instrumentos){
-      let instrumento = instrumentox.instrumentos.toLowerCase();
-        if(instrumento.indexOf(termino) >= 0){
-          instrumentosArr.push(instrumentox);
+    for(let producto of this.instrumentosFile.instrumentos){
+      let nombre = producto.instrumento.toLowerCase();
+        if(nombre.indexOf(termino) >= 0){
+          instrumentosArr.push(producto);
         }
     }
     return instrumentosArr;

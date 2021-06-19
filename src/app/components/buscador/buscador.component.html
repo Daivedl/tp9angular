@@ -1,1 +1,25 @@
-<p>buscador works!</p>
+<h1>Buscando: {{termino}} </h1>
+
+
+<div class="card mb-3" style="max-width: 540px;" *ngFor="let inst of instrumentosBusqueda; let i = index">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img (click)="verInstrumento(inst.id)" src="assets/images/{{inst.imagen}}" class="card-img-top" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"> {{inst.instrumento}} </h5>
+        <h2 class="card-text"> ${{inst.precio}} </h2>
+        <h6 *ngIf="inst.costoEnvio ==='G'">
+          <p [style.color]="'green'"><img [style.width]=20 [style.height]=20 src="assets/images/camion.png"
+              alt="d">Envío gratis a todo el país</p>
+        </h6>
+        <h6 *ngIf="inst.costoEnvio !='G'">
+          <p [style.color]="'orange'">Costo de Envío Interior de Argentina: $ {{inst.costoEnvio}} </p>
+        </h6>
+        <p> {{inst.cantidadVendida}} vendidos </p>
+        <button (click)="verInstrumento(inst.id)" class="btn btn-primary btn-sm" style="width: 25%;">Detalle</button>
+      </div>
+    </div>
+  </div>
+</div>
