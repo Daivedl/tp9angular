@@ -7,6 +7,7 @@ import { ProductosComponent } from './components/productos/productos.component';
 import { DetalleProductoComponent } from './components/detalle-producto/detalle-producto.component';
 import { WhereComponent } from './components/where/where.component';
 import { HomeComponent } from './components/home/home.component';
+import { BuscadorComponent } from './components/buscador/buscador.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HomeComponent } from './components/home/home.component';
     ProductosComponent,
     DetalleProductoComponent,
     WhereComponent,
-    HomeComponent
+    HomeComponent,
+    BuscadorComponent
   ],
   imports: [
     BrowserModule,

@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-where',
-  templateUrl: './where.component.html',
-  styleUrls: ['./where.component.css']
+  templateUrl: './where.component.html'
 })
 export class WhereComponent implements OnInit {
 
